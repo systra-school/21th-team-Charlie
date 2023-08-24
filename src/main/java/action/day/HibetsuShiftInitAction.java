@@ -76,7 +76,10 @@ public class HibetsuShiftInitAction extends HibetsuShiftAbstractAction {
 
         // 戻り先を保存
         req.setAttribute(RequestSessionNameConstant.REQUEST_BACK_PAGE, "");
-
+        
+        //日別シフト　画面確認用
+        forward = CommonConstant.SUCCESS;
+        
         return mapping.findForward(forward);
     }
 }
