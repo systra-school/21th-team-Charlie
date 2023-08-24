@@ -92,6 +92,7 @@ if (listSize > intShowLength) {
             </td>
             <td id="headRight">
             	<!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
+            	
 				<html:form action="/logout">
              		 <input type="submit" value="ログアウト" class="bigButton" />
             	</html:form> 
