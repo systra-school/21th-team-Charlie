@@ -241,12 +241,12 @@
             <td id="footRight">
             <%--“o˜^ƒ{ƒ^ƒ“‚Å‰æ–Ê‘JˆÚ‚·‚é‚æ‚¤C³@¼ --%>
            	<html:form action="/shiftMstMntRegistInit">
-            	<input type="submit" value="“o˜^" class="smlButton" />
+            	<input type="submit" value="V‹K“o˜^" class="smlButton" />
            	</html:form> 
-              <%-- <input value="V‹K“o˜^" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />
+              <%-- <input value="V‹K“o˜^" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />--%>
             </td>
-            <td id="footRight">
-              <input value="XV" type="button" class="smlButton"  onclick="shiftMstMntUpdate()" />--%>
+            <td>
+              <input value="XV" type="button" class="smlButton"  onclick="shiftMstMntUpdate()" />
             </td>
           </tr>
         </table>
