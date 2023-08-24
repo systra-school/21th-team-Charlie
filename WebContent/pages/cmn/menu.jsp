@@ -42,11 +42,15 @@
             </logic:equal>
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" />
+				<html:form action="/logout">
+             		 <input type="submit" value="ログアウト" class="bigButton" />
+            	</html:form> 
+				<!-- <input value="ログアウト" type="button" class="smlButton" onclick="logout()" />-->
             </td>
           </tr>
         </table>
       </div>
+      
       <div id="gymBody">
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="kengenId"

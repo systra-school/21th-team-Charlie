@@ -1,71 +1,71 @@
 /**
- * ƒtƒ@ƒCƒ‹–¼Fmessage.js
- * ƒƒbƒZ[ƒWˆ—
+ * ãƒ•ã‚¡ã‚¤ãƒ«åï¼šmessage.js
+ * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å‡¦ç†
  *
- * •ÏX—š—ð
+ * å¤‰æ›´å±¥æ­´
  * 1.0  2010/09/10 Kazuya.Naraki
  */
 
 /**
- * ƒƒbƒZ[ƒW‚Ì’è‹`
+ * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®å®šç¾©
  */
 var messageArr = {
-        'E-MSG-000001':'{0}‚Í•K{‚Å‚·B',
-        'E-MSG-000002':'ƒƒOƒCƒ“ID‚Ü‚½‚ÍƒpƒXƒ[ƒh‚ªˆá‚¢‚Ü‚·B',
-        'E-MSG-000003':'{0}‚Í”¼ŠpƒJƒi“ü—Í‚Å‚·B',
-        'E-MSG-000004':'{0}‚Íuhh:mmvŒ`Ž®‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B',
-        'E-MSG-000005':'ŠJŽn“ú‚ªI—¹“ú‚æ‚èŒã‚Ì“ú•t‚Æ‚È‚Á‚Ä‚¢‚Ü‚·B'
+        'E-MSG-000001':'{0}ã¯å¿…é ˆã§ã™ã€‚',
+        'E-MSG-000002':'ãƒ­ã‚°ã‚¤ãƒ³IDã¾ãŸã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™ã€‚',
+        'E-MSG-000003':'{0}ã¯åŠè§’ã‚«ãƒŠå…¥åŠ›ã§ã™ã€‚',
+        'E-MSG-000004':'{0}ã¯ã€Œhh:mmã€å½¢å¼ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚',
+        'E-MSG-000005':'é–‹å§‹æ—¥ãŒçµ‚äº†æ—¥ã‚ˆã‚Šå¾Œã®æ—¥ä»˜ã¨ãªã£ã¦ã„ã¾ã™ã€‚'
 };
 
 /**
- * ƒGƒ‰[ƒƒbƒZ[ƒW‚ð•\Ž¦‚·‚éB
- * param str ƒGƒ‰[ƒƒbƒZ[ƒW
- * param repStrArr ’uŠ·•¶Žš—ñ‚Ì”z—ñ
+ * ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+ * param str ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
+ * param repStrArr ç½®æ›æ–‡å­—åˆ—ã®é…åˆ—
  */
 function showMessage(errorCode, repStrArr) {
     var message = messageArr[errorCode];
 
-    // ’uŠ·‚·‚é•¶Žš—ñ‚Ì”z—ñ•ªˆ—‚ðŒJ‚è•Ô‚·
+    // ç½®æ›ã™ã‚‹æ–‡å­—åˆ—ã®é…åˆ—åˆ†å‡¦ç†ã‚’ç¹°ã‚Šè¿”ã™
     for (var i = 0; i < repStrArr.length; i++) {
         var patern = new RegExp("\\{" + i + "\\}", "g");
         message = message.replace(patern, repStrArr[i]);
     }
 
-    message = errorCode + 'F' + message;
+    message = errorCode + 'ï¼š' + message;
 
     alert(message);
 }
 
 /**
- * ƒGƒ‰[ƒƒbƒZ[ƒW‚ðŽæ“¾‚·‚éB
- * param str ƒGƒ‰[ƒƒbƒZ[ƒW
- * param repStrArr ’uŠ·•¶Žš—ñ‚Ì”z—ñ
- * return ƒGƒ‰[ƒƒbƒZ[ƒW
+ * ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å–å¾—ã™ã‚‹ã€‚
+ * param str ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
+ * param repStrArr ç½®æ›æ–‡å­—åˆ—ã®é…åˆ—
+ * return ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
  */
 function getMessage(errorCode, repStrArr) {
     var message = messageArr[errorCode];
 
-    // ’uŠ·‚·‚é•¶Žš—ñ‚Ì”z—ñ•ªˆ—‚ðŒJ‚è•Ô‚·
+    // ç½®æ›ã™ã‚‹æ–‡å­—åˆ—ã®é…åˆ—åˆ†å‡¦ç†ã‚’ç¹°ã‚Šè¿”ã™
     for (var i = 0; i < repStrArr.length; i++) {
         var patern = new RegExp("\\{" + i + "\\}", "g");
         message = message.replace(patern, repStrArr[i]);
     }
 
-    message = errorCode + 'F' + message + '\n';
+    message = errorCode + 'ï¼š' + message + '\n';
 
     return message;
 }
 
 /**
- * ƒGƒ‰[ƒƒbƒZ[ƒW‚ðŽæ“¾‚·‚éB
- * param str ƒGƒ‰[ƒƒbƒZ[ƒW
- * param repStrArr ’uŠ·•¶Žš—ñ‚Ì”z—ñ
- * return ƒGƒ‰[ƒƒbƒZ[ƒW
+ * ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å–å¾—ã™ã‚‹ã€‚
+ * param str ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
+ * param repStrArr ç½®æ›æ–‡å­—åˆ—ã®é…åˆ—
+ * return ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
  */
 function getMessageCodeOnly(errorCode) {
     var message = messageArr[errorCode];
 
-    message = errorCode + 'F' + message + '\n';
+    message = errorCode + 'ï¼š' + message + '\n';
 
     return message;
 }
