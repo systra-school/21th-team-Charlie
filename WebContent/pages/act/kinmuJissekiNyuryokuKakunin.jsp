@@ -124,7 +124,11 @@
         <table width="100%">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/kinmuJissekiNyuryokuKakuninBack.do')" />
+               <!-- 修正＆追加　村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
+             	<html:form action="/tsukibetsuShiftNyuuryokuBack">
+             		 <input type="submit" value="戻る" class="bigButton" />
+            	</html:form> 
+             	<!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/tsukibetsuShiftKakuninBack.do')" /> -->
             </td>
             <td id="headCenter">
               勤務実績入力
