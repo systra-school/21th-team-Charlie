@@ -85,7 +85,12 @@ if (listSize > intShowLength) {
         <table>
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/tsukibetsuShiftKakuninBack.do')" />
+            <!-- 修正＆追加　上川 inputタグをコメントアウト＆htmlタグを追加 -->
+             <html:form action="/tsukibetsuShiftNyuuryokuBack">
+             		 <input type="submit" value="戻る" class="bigButton" />
+            	</html:form> 
+            	<!-- 上川  コメントアウト -->
+             <!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/tsukibetsuShiftKakuninBack.do')" /> -->
             </td>
             <td id="headCenter">
               月別シフト確認
