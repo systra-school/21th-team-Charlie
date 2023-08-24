@@ -24,11 +24,11 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
+    
     /**
      * チェックボックスがチェックされたら true、されていなければ false
      * param index 対象行番号
@@ -137,12 +137,12 @@
         document.forms[0].submit();
     }
 
-    -->
+    
     </script>
 
     <title>シフトマスタメンテナンス画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="wrapper">
@@ -239,8 +239,14 @@
               　
             </td>
             <td id="footRight">
-              <input value="新規登録" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />
-              <input value="更新" type="button" class="smlButton"  onclick="shiftMstMntUpdate()" />
+            <%--登録ボタンで画面遷移するよう修正　西 --%>
+           	<html:form action="/shiftMstMntRegistInit">
+            	<input type="submit" value="登録" class="smlButton" />
+           	</html:form> 
+              <%-- <input value="新規登録" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />
+            </td>
+            <td id="footRight">
+              <input value="更新" type="button" class="smlButton"  onclick="shiftMstMntUpdate()" />--%>
             </td>
           </tr>
         </table>
