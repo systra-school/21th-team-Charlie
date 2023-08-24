@@ -78,7 +78,12 @@
         <table>
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/hibetsuShiftBack.do')" />
+            <!-- 修正＆追加　上川 inputタグをコメントアウト＆htmlタグを追加 -->
+             	<html:form action="/tsukibetsuShiftNyuuryokuBack">
+             		 <input type="submit" value="戻る" class="bigButton" />
+            	</html:form> 
+             	
+             <!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/hibetsuShiftBack.do')" />　-->
             </td>
             <td id="headCenter">
               日別シフト確認画面
