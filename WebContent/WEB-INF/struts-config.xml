@@ -263,6 +263,8 @@
         name="hibetsuShiftForm"
         scope="session">
         <forward name="success" path="/pages/day/hibetsuShift.jsp"/>
+         <!-- 追加　データがなくても画面表示させる追加コード 西-->
+        <forward name="nodata" path="/pages/day/hibetsuShift.jsp"/>
       </action>
       <!-- 日別シフト改ページ -->
       <action
