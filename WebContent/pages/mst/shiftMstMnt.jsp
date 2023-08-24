@@ -156,7 +156,11 @@
               シフトマスタメンテナンス
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" />
+               <!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
+				<html:form action="/logout">
+             		 <input type="submit" value="ログアウト" class="bigButton" />
+            	</html:form> 
+				<!-- <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" /> -->
             </td>
           </tr>
         </table>
