@@ -22,7 +22,6 @@
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
 
     /**
      * チェックボックスがチェックされたら true、されていなければ false
@@ -77,7 +76,6 @@
         doSubmit('/kikin_test/shainMstMntRegist.do');
     }
 
-    -->
     </script>
     <title>社員マスタメンテナンス画面</title>
 

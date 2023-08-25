@@ -141,7 +141,7 @@
         type="action.mst.ShainMstMntRegistBackAction"
         name="shainMstMntRegistForm"
         scope="session">
-        <forward name="success" path="/shainMstMnt.do"/>
+        <forward name="success" path="/menu.do"/>
       </action>
 
       <!-- シフトマスタメンテナンス 初期表示 -->
