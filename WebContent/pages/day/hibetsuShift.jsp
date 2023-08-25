@@ -46,9 +46,9 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
 
@@ -56,7 +56,7 @@
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin/shukkinKibouKakuninShow.do');
+        doSubmit('/kikin_test/shukkinKibouKakuninShow.do');
     }
 
     /**
@@ -70,7 +70,7 @@
     </script>
     <title>日別シフト確認画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="wrapper">
@@ -83,7 +83,7 @@
              		 <input type="submit" value="戻る" class="bigButton" />
             	</html:form> 
              	
-             <!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/hibetsuShiftBack.do')" />　-->
+             <!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/hibetsuShiftBack.do')" />　-->
             </td>
             <td id="headCenter">
               日別シフト確認画面
@@ -103,9 +103,9 @@
           <html:form>
             <div style="height: 20px">
               表示年月：
-              <html:link href="/kikin/hibetsuShiftPage.do?paging=back">前日</html:link>
+              <html:link href="/kikin_test/hibetsuShiftPage.do?paging=back">前日</html:link>
               <bean:write name="hibetsuShiftForm" property="yearMonthDayDisp"/>
-              <html:link href="/kikin/hibetsuShiftPage.do?paging=next">翌日</html:link>
+              <html:link href="/kikin_test/hibetsuShiftPage.do?paging=next">翌日</html:link>
             </div>
             <table border="0" cellpadding="0" cellspacing="0">
               <tr>

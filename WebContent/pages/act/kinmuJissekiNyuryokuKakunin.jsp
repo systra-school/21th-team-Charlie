@@ -22,9 +22,9 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     /**
      * hh:mm形式と勤務開始時間＜勤務終了時間のチェック後エラーが無かったら登録する
@@ -101,7 +101,7 @@
 			}
 			
 			if(!errorMsg) {
-				doSubmit('/kikin/kinmuJissekiNyuryokuKakuninRegist.do');
+				doSubmit('/kikin_test/kinmuJissekiNyuryokuKakuninRegist.do');
 			}
      	}	
     }
@@ -109,14 +109,14 @@
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin/kinmuJissekiNyuryokuKakuninSearch.do');
+        doSubmit('/kikin_test/kinmuJissekiNyuryokuKakuninSearch.do');
     }
     
     
     </script>
     <title>勤務実績入力画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body >
     <div id="wrapper">
@@ -128,7 +128,7 @@
              	<html:form action="/tsukibetsuShiftNyuuryokuBack">
              		 <input type="submit" value="戻る" class="bigButton" />
             	</html:form> 
-             	<!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/tsukibetsuShiftKakuninBack.do')" /> -->
+             	<!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/tsukibetsuShiftKakuninBack.do')" /> -->
             </td>
             <td id="headCenter">
               勤務実績入力

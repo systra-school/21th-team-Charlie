@@ -47,37 +47,35 @@ if (listSize > intShowLength) {
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
 
     /**
      * 登録
      */
     function submitPrint() {
         // サブミット
-        doSubmit('/kikin/tsukibetsuShiftKakuninPrint.do');
+        doSubmit('/kikin_test/tsukibetsuShiftKakuninPrint.do');
     }
 
     /**
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin/tsukibetsuShiftKakuninSearch.do');
+        doSubmit('/kikin_test/tsukibetsuShiftKakuninSearch.do');
     }
     /**
      * サブウィンドウを開く
      */
     function openWindow(){
-        window.open("/kikin/shiftHanrei.do?param=", null, "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
+        window.open("/kikin_test/shiftHanrei.do?param=", null, "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
     }
-    -->
     </script>
     <title>月別シフト確認画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="wrapper">
@@ -89,7 +87,7 @@ if (listSize > intShowLength) {
              	<html:form action="/tsukibetsuShiftNyuuryokuBack">
              		 <input type="submit" value="戻る" class="bigButton" />
             	</html:form> 
-             	<!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/tsukibetsuShiftKakuninBack.do')" /> -->
+             	<!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/tsukibetsuShiftKakuninBack.do')" /> -->
             </td>
             <td id="headCenter">
               月別シフト確認
@@ -116,8 +114,8 @@ if (listSize > intShowLength) {
                                       value="key"
                                       label="value"/>
               </html:select>
-              <html:link href="/kikin/tsukibetsuShiftKakuninPage.do?paging=back">前へ</html:link>
-              <html:link href="/kikin/tsukibetsuShiftKakuninPage.do?paging=next">次へ</html:link>
+              <html:link href="/kikin_test/tsukibetsuShiftKakuninPage.do?paging=back">前へ</html:link>
+              <html:link href="/kikin_test/tsukibetsuShiftKakuninPage.do?paging=next">次へ</html:link>
               <bean:write name="tsukibetsuShiftKakuninForm" property="cntPage"/>/
               <bean:write name="tsukibetsuShiftKakuninForm" property="maxPage"/>
             </div>

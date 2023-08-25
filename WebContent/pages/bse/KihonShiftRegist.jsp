@@ -32,9 +32,9 @@
 %>
 <html>
   <head>
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
     /**
@@ -58,7 +58,7 @@
      * 新規登録画面へ
      */
     function shainMstMntRegistInit() {
-        document.forms[0].action = "/kikin/shainMstMntRegistInit.do";
+        document.forms[0].action = "/kikin_test/shainMstMntRegistInit.do";
         document.forms[0].submit();
     }
 
@@ -119,7 +119,7 @@
 
     <title>社員マスタメンテナンス画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="header">
@@ -128,7 +128,7 @@
       </div>
 
       <div class="backBtn">
-        <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/menu.do')" />
+        <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/menu.do')" />
       </div>
 
       <div class="logoutBtn">

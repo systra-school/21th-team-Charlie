@@ -74,7 +74,7 @@
         }
 
         // サブミット
-        doSubmit('/kikin/shainMstMntRegist.do');
+        doSubmit('/kikin_test/shainMstMntRegist.do');
     }
 
     -->

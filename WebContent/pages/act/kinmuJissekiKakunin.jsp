@@ -22,9 +22,9 @@ String color = "";
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
 
@@ -32,13 +32,13 @@ String color = "";
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin/kinmuJissekiKakuninSearch.do');
+        doSubmit('/kikin_test/kinmuJissekiKakuninSearch.do');
     }
     -->
     </script>
     <title>勤務実績確認画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="wrapper">
@@ -46,7 +46,7 @@ String color = "";
         <table width="100%">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/kinmuJissekiKakuninBack.do')" />
+              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/kinmuJissekiKakuninBack.do')" />
             </td>
             <td id="headCenter">
               勤務実績確認

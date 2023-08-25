@@ -30,9 +30,9 @@ String color = "";
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
 
@@ -40,13 +40,13 @@ String color = "";
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin/shukkinKibouKakuninSubSearch.do');
+        doSubmit('/kikin_test/shukkinKibouKakuninSubSearch.do');
     }
     -->
     </script>
     <title>出勤希望確認画面</title>
 
-    <link href="/kikin/pages/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="wrapper">
@@ -75,8 +75,8 @@ String color = "";
                                     value="key"
                                     label="value"/>
             </html:select>
-            <html:link href="/kikin/shukkinKibouKakuninSubPage.do?paging=back">前へ</html:link>
-            <html:link href="/kikin/shukkinKibouKakuninSubPage.do?paging=next">次へ</html:link>
+            <html:link href="/kikin_test/shukkinKibouKakuninSubPage.do?paging=back">前へ</html:link>
+            <html:link href="/kikin_test/shukkinKibouKakuninSubPage.do?paging=next">次へ</html:link>
             <bean:write name="shukkinKibouKakuninForm" property="cntPage"/>/
             <bean:write name="shukkinKibouKakuninForm" property="maxPage"/>
 
