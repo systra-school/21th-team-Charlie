@@ -43,7 +43,8 @@ String color = "";
   <body>
     <div id="wrapper">
       <div id="header">
-        <table width="100%">
+      <!-- ãì@ƒƒCƒY‚ð‚P‚O‚O¨90‚ÉC³ -->
+        <table width="90%">
           <tr>
             <td id="headLeft">
               <input value="–ß‚é" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/kinmuJissekiKakuninBack.do')" />
