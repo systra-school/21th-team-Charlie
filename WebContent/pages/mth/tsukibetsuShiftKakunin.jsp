@@ -85,7 +85,7 @@ if (listSize > intShowLength) {
             <td id="headLeft">
              	<!-- 修正＆追加　村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
              	<html:form action="/tsukibetsuShiftNyuuryokuBack">
-             		 <input type="submit" value="戻る" class="bigButton" />
+             		 <input type="submit" value="戻る" class="smlButton" />
             	</html:form> 
              	<!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/tsukibetsuShiftKakuninBack.do')" /> -->
             </td>
@@ -95,7 +95,7 @@ if (listSize > intShowLength) {
             <td id="headRight">
             	<!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
 				<html:form action="/logout">
-             		 <input type="submit" value="ログアウト" class="bigButton" />
+             		 <input type="submit" value="ログアウト" class="smlButton" />
             	</html:form> 
 				<!-- <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" /> -->
             </td>
