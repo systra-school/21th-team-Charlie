@@ -262,6 +262,7 @@
                       </tr>
                     </table>
                   </div>
+                  <!-- ‚±‚±‚©‚çŽÐˆõ–¼•\Ž¦ -->
                 </td>
                 <td width="100%" valign="top">
                   <div id="bodyRightTbl"  style="overflow-x: auto;overflow-y: auto;width: <%=bodyRightDivWidth %>px;height:<%=bodyRightDivHeight %>px;" onScroll="onScroll();">
