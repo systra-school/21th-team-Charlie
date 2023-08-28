@@ -239,11 +239,14 @@
               Å@
             </td>
             <td id="footRight">
-            <%--ìoò^É{É^ÉìÇ≈âÊñ ëJà⁄Ç∑ÇÈÇÊÇ§èCê≥Å@êº --%>
-           	<html:form action="/shiftMstMntRegistInit">
-            	<input type="submit" value="êVãKìoò^" class="smlButton" />
-           	</html:form> 
-              <%-- <input value="êVãKìoò^" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />--%>
+            <!--ìoò^É{É^ÉìÇ≈âÊñ ëJà⁄Ç∑ÇÈÇÊÇ§èCê≥Å@êº -->
+           	<!--<html:form action="/shiftMstMntRegistInit">
+            	<input type="submit" value="êVãKìoò^" class="smlButton"  />
+           	</html:form>  -->
+              <!-- <input value="êVãKìoò^" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />-->
+              
+              <!--ìoò^É{É^ÉìÇ≈âÊñ ëJà⁄Ç∑ÇÈÇÊÇ§inputÉ^ÉOÇ≈ÇÃãLèqÇ…èCê≥Å@êº -->
+              <input value="êVãKìoò^" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/shiftMstMntRegistInit.do')" />
             </td>
             <td>
               <input value="çXêV" type="button" class="smlButton"  onclick="shiftMstMntUpdate()" />
