@@ -92,17 +92,11 @@ if (listSize > intShowLength) {
 			<table>
 				<tr>
 					<td id="headLeft">
-						<!-- 修正＆追加　村瀬 inputタグをコメントアウト＆htmlタグを追加 --> <html:form
-							action="/tsukibetsuShiftNyuuryokuBack">
-							<input type="submit" value="戻る" class="smlButton" />
-						</html:form> <!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/tsukibetsuShiftKakuninBack.do')" /> -->
+						<input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/tsukibetsuShiftKakuninBack.do')" /> 
 					</td>
 					<td id="headCenter">月別シフト確認</td>
 					<td id="headRight">
-						<!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 --> <html:form
-							action="/logout">
-							<input type="submit" value="ログアウト" class="smlButton" />
-						</html:form> <!-- <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" /> -->
+						<input value="ログアウト" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/logout.do')" />
 					</td>
 				</tr>
 			</table>
