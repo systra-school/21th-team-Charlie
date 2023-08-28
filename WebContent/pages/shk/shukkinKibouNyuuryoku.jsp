@@ -80,7 +80,8 @@
               出勤希望日入力
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" />
+            <!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 -->
+              <input value="ログアウト" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/logout.do')" />
             </td>
           </tr>
         </table>

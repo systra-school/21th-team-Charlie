@@ -99,11 +99,8 @@ if (listSize > intShowLength) {
               月別シフト入力
             </td>
             <td id="headRight">
-               <!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
-				<html:form action="/logout">
-             		 <input type="submit" value="ログアウト" class="smlButton" />
-            	</html:form> 
-				<!-- <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" /> -->
+               <!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 -->
+				<input value="ログアウト" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/logout.do')" />
             </td>
           </tr>
         </table>

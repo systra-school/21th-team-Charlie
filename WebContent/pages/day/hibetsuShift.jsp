@@ -78,22 +78,15 @@
         <table>
           <tr>
             <td id="headLeft">
-            <!-- 修正＆追加　上川 inputタグをコメントアウト＆htmlタグを追加 -->
-             	<html:form action="/tsukibetsuShiftNyuuryokuBack">
-             		 <input type="submit" value="戻る" class="smlButton" />
-            	</html:form> 
-             	
-             <!-- <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/hibetsuShiftBack.do')" />　-->
+            <!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 -->
+             <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/hibetsuShiftBack.do')" />
             </td>
             <td id="headCenter">
               日別シフト確認画面
             </td>
             <td id="headRight">
-              <!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
-				<html:form action="/logout">
-             		 <input type="submit" value="ログアウト" class="smlButton" />
-            	</html:form> 
-				<!-- <input value="ログアウト" type="button" class="smlButton" onclick="logout()" />-->
+              <!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 --> 
+				<input value="ログアウト" type="button" class="smlButton" onclick="doSubmit('/kikin_test/logout.do')" />
             </td>
           </tr>
         </table>

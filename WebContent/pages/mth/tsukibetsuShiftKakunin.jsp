@@ -96,6 +96,7 @@ if (listSize > intShowLength) {
 					</td>
 					<td id="headCenter">月別シフト確認</td>
 					<td id="headRight">
+					<!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 -->
 						<input value="ログアウト" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/logout.do')" />
 					</td>
 				</tr>
