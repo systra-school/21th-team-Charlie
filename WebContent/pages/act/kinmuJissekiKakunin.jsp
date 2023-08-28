@@ -26,7 +26,7 @@ String color = "";
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
+    
 
     /**
      * 検索
@@ -34,7 +34,7 @@ String color = "";
     function submitSearch() {
         doSubmit('/kikin_test/kinmuJissekiKakuninSearch.do');
     }
-    -->
+    
     </script>
     <title>勤務実績確認画面</title>
 
@@ -54,10 +54,12 @@ String color = "";
             </td>
             <td id="headRight">
               <!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
-				<html:form action="/logout">
+				<!--<html:form action="/logout">
              		 <input type="submit" value="ログアウト" class="smlButton" />
-            	</html:form> 
-				<!-- <input value="ログアウト" type="button" class="smlButton" onclick="logout()" />-->
+            	</html:form> -->
+            	 <!-- 修正＆追加 西　htmlタグをコメントアウトinputタグ記載に修正 -->
+            	<input value="ログアウト" type="button" class="smlButton" onclick="doSubmit('/kikin_test/logout.do')" />
+				<!--<input value="ログアウト" type="button" class="smlButton" onclick="logout()" />-->
             </td>
           </tr>
         </table>
