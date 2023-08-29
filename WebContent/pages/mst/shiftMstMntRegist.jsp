@@ -94,9 +94,10 @@
             // エラー
             return false;
         }
-
-        document.forms[0].submit();
+        // サブミット
+        doSubmit('/kikin_test/shiftMstMntRegist.do');
     }
+    
 
     </script>
 

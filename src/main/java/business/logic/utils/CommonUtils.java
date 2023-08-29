@@ -177,9 +177,14 @@ public class CommonUtils {
         if (CheckUtils.isEmpty(maxId)) {
             throw new CommonException("ＩＤが存在しない");
         }
-
+        //　シフト登録できるようコードを書き換える　有吉
         // ＩＤの数字部分
-        String numId = maxId.substring(2, 6);
+        String numId;
+        if (maxId.length() > 7) {
+        	numId = maxId.substring(8, 12);
+        }else {
+        	numId = maxId.substring(2, 6);
+        }
         int intNumId = Integer.parseInt(numId);
 
         if (intNumId >= 9999) {

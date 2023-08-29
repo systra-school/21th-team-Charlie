@@ -53,7 +53,7 @@
               基本シフト確認
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smlButton"  onclick="logout()" />
+              <input value="ログアウト" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/logout.do')" />
             </td>
           </tr>
         </table>
