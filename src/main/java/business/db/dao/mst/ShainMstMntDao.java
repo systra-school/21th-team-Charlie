@@ -6,7 +6,6 @@
  */
 package business.db.dao.mst;
 
-import static constant.DbConstant.M_shain;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,6 +19,7 @@ import business.db.dao.AbstractDao;
 import business.dto.LoginUserDto;
 import business.dto.mst.ShainMstMntDto;
 import business.logic.utils.CommonUtils;
+import constant.DbConstant.M_shain;
 
 
 
@@ -78,7 +78,7 @@ public class ShainMstMntDao extends AbstractDao {
                 mShainDto.setUpdateShainId(rs.getString(M_shain.UPDATE_SHAIN_ID.getName())); // 更新者ID
                 mShainDto.setUpdateDt(rs.getDate(M_shain.UPDATE_DT.getName())); // 更新日時
             } else {
-                return null;
+            	return null;
             }
         } catch (SQLException e) {
             // 例外発生
@@ -156,7 +156,8 @@ public class ShainMstMntDao extends AbstractDao {
 
         try {
             // コネクションの取得
-            this.getConnection();
+        	/*上川・村瀬　コネクションをコメントアウト
+            this.getConnection();*/
 
             StringBuffer strSql = new StringBuffer();
             strSql.append("UPDATE ");
