@@ -73,7 +73,9 @@ public class TsukibetsuShiftNyuuryokuRegistAction extends TsukibetsuShiftNyuuryo
         List<TsukibetsuShiftNyuuryokuBean> tsukibetsuShiftBeanList = tsukibetsuShiftForm.getTsukibetsuShiftNyuuryokuBeanList();
 
         // 対象年月
-        String yearMonth = CommonUtils.getFisicalDay(CommonConstant.yearMonthNoSl);
+        //String yearMonth = CommonUtils.getFisicalDay(CommonConstant.yearMonthNoSl);
+        //対象年月を現在日時から取得していたので選択年月を取得するよう修正　西
+        String yearMonth = tsukibetsuShiftForm.getYearMonth();
 
         // ロジック生成
         TsukibetsuShiftLogic tsukibetsuShiftLogic = new TsukibetsuShiftLogic();
