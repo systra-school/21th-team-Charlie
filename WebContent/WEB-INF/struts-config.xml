@@ -273,6 +273,8 @@
         name="hibetsuShiftForm"
         scope="session">
         <forward name="success" path="/pages/day/hibetsuShift.jsp"/>
+        <!-- データが入っていない場合もページ遷移するように修正　西 -->
+        <forward name="nodata" path="/pages/day/hibetsuShift.jsp"/>
       </action>
       <!-- 日別シフト改ページ -->
       <action
@@ -281,6 +283,8 @@
         name="hibetsuShiftForm"
         scope="session">
         <forward name="success" path="/pages/cmn/menu.jsp"/>
+        <!-- データが入っていない場合もページ遷移するように修正　西 -->
+        <forward name="nodata" path="/pages/day/hibetsuShift.jsp"/>
       </action>
 
       <!-- 勤務実績入力確認初期表示 -->
