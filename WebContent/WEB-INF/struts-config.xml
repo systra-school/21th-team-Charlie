@@ -420,6 +420,14 @@
         scope="session">
         <forward name="success" path="/pages/mth/tsukibetsuShiftNyuuryoku.jsp"/>
       </action>
+      
+      <action
+        path="/syukkinKibouNyuuryokuRegist"
+        type="action.mth.TsukibetsuShiftNyuuryokuRegistAction"
+        name="tsukibetsuShiftNyuuryokuForm"
+        scope="session">
+        <forward name="success" path="/pages/shk/shukkinKibouNyuuryoku.jsp"/>
+      </action>
       <!-- 月別シフト確認戻る -->
       <action
         path="/tsukibetsuShiftNyuuryokuBack"
@@ -486,17 +494,6 @@
         scope="session">
         <forward name="success" path="/pages/shk/shukkinKibouNyuuryoku.jsp"/>
       </action>
-      
-      <!-- 出勤希望入力検索 追記　西 -->
-        <action
-        path="/shukkinKibouNyuuryokuSearch"
-        type="action.shk.ShukkinKibouNyuuryokuSearchAction"
-        name="tsukibetsuShiftNyuuryokuForm"
-        scope="session">
-        <forward name="success" path="/pages/shk/shukkinKibouNyuuryoku.jsp"/>
-      </action>
-      
-      
     </action-mappings>
 
 
