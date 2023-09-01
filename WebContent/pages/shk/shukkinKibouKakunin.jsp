@@ -32,7 +32,8 @@
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
+    <!-- 検索、サブウィンドウを開くfanctionがコメントアウトされていたのを修正　上川-->
+    <!-- -->
     /**
      * 検索
      */
@@ -45,7 +46,7 @@
     function openWindow(){
         window.open("/kikin_test/shiftHanrei.do?param=", null, "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
     }
-    -->
+    <!--  -->
     </script>
     <title>出勤希望確認画面</title>
 
