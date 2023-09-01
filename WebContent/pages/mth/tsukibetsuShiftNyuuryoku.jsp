@@ -28,7 +28,9 @@
 <bean:define id="maxPage" name="tsukibetsuShiftNyuuryokuForm" property="maxPage" type="java.lang.Integer"/>
 
 <%
-final int heightSize = 22;
+// 表の高さ調整　西 
+final int heightSize = 26;
+//final int heightSize = 22;
 
 int intShowLength = Integer.parseInt(showLength);
 
@@ -105,9 +107,15 @@ if (listSize > intShowLength) {
           </tr>
         </table>
       </div>
-      <div id="gymBody" style="overflow: hidden;">
+      
+      <!--  <div id="gymBody" style="overflow: hidden;">-->
+      <div id="gymBody" style="overflow:auto;">
+      
         <html:form action="/tsukibetsuShiftNyuuryokuPage" >
-          <div style="margin-left:50px;">
+          
+          <!-- 表のずれ調整　西 -->
+          <!--  <div style="margin-left:50px;">-->
+          <div style="margin-left:80px;">
             <div style="height: 25px;">
               表示年月：
               <bean:define id="sessionYearMonth" name="tsukibetsuShiftNyuuryokuForm" property="yearMonth" type="String"/>
