@@ -24,7 +24,7 @@
     int bodyLeftDivHeight =0;
     // ボディテーブルの td の幅
     int tdWidth = 200;       /* 修正：長野文字に幅を広げた */
-    int tdWidth2 = 150;　  /*  tdWidth2を追加し時間列を調整  */
+    int tdWidth2 = 150; /* tdWidth2を追加し時間列を調整 */
     // ボディテーブルの tr の縦
     int trHeight = 50;
     // 縦スクロールバーの幅
