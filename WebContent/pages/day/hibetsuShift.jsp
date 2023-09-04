@@ -120,6 +120,7 @@
                       <tr>
                         <logic:iterate id="hibetsuShiftBean" name="hibetsuShiftForm" property="hibetsuShiftBeanList">
                           <td width="<%=tdWidth %>px" nowrap="nowrap" align="center">  <!-- @@@@@nagano@@@ -->
+                         <bean:write name="hibetsuShiftBean" property="shainName"/><br>
                           </td>
                         </logic:iterate>
                       </tr>
