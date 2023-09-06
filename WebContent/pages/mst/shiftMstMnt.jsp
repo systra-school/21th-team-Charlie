@@ -26,7 +26,7 @@
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
     <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js" charset="utf-8"></script>
     <script type="text/javascript" language="Javascript1.1">
     
     /**
