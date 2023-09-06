@@ -22,6 +22,27 @@
 <bean:size id="dateBeanListSize" name="tsukibetsuShiftNyuuryokuForm" property="dateBeanList"/>
 <bean:define id="color" value="" type="java.lang.String"/>
 <bean:define id="shainId" name="loginUserDto" property="shainId" type="java.lang.String" />
+
+<%
+    int bodyRightDivWidth =0;
+    int bodyRightDivHeight =0;
+    int bodyLeftDivHeight =0;
+    // ボディテーブルの td の幅
+    int tdWidth = 200;       /* 修正：長野文字に幅を広げた */
+    int tdWidth2 = 150; /* tdWidth2を追加し時間列を調整 */
+    // ボディテーブルの tr の縦
+    int trHeight = 50;
+    // 縦スクロールバーの幅
+    int scrollBarSize = 20;
+
+        bodyRightDivWidth = dateBeanListSize * tdWidth+ scrollBarSize;
+        bodyRightDivHeight = 402;
+        bodyLeftDivHeight = 402;
+
+
+
+%>
+
 <html>
   <head>
     <meta http-equiv="Pragma" content="no-cache">
@@ -31,7 +52,6 @@
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    
 
     /**
      * 出勤希望反映
@@ -75,6 +95,7 @@
       <div id="header">
         <table>
           <tr>
+       
             <td id="headLeft">
               <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/tsukibetsuShiftNyuuryokuBack.do')" />
             </td>
@@ -88,22 +109,39 @@
           </tr>
         </table>
       </div>
-      <div id="gymBody" style="overflow: hidden;">
+      <div id="gymBody" style="overflow: hidden;" >
+      <div style="margin-left:80px;">
+      
+         <div id="bodyLeftTbl" style="overflow-x: auto;overflow-y: hidden;width: 1100px;height:120px; ">
         <html:form action="/tsukibetsuShiftNyuuryokuInit.do" >
           <div style="margin-left:25px;">
             <div style="height: 25px;">
+            
               表示年月：
               <bean:define id="sessionYearMonth" name="tsukibetsuShiftNyuuryokuForm" property="yearMonth" type="String"/>
+              
               <html:select property="yearMonth" name="tsukibetsuShiftNyuuryokuForm"  onchange="submitSearch()">
               <html:optionsCollection name="tsukibetsuShiftNyuuryokuForm"
                                       property="yearMonthCmbMap"
                                       value="key"
                                       label="value"/>
+                                            
               </html:select>
             </div>
+            </div>
             
-            <!-- ここから新規 -->
-            <table width="1100px" cellpadding="0" cellspacing="0" border="1">
+            <!--newテーブル -->
+            
+            
+            
+            
+            
+            
+            
+            <!-- 右側テーブル --> 
+            
+            <table width="1500px" cellpadding="0" cellspacing="0" border="1"> 
+    
 				<tr class="tblHeader">
 					<td ></td>
 					<td width="40px" align="center">1</td>
@@ -156,8 +194,11 @@ if (dateBeanListSize == 31) {
 }
 %>
 				</tr>
+		
+				
+				
 				<tr class="tblHeader">
-					<td width="150px" align="center">社員名</td>
+					<td width="200px" align="center">社員名</td>
 					<logic:iterate
 						id="dateBeanList"
 						name="tsukibetsuShiftNyuuryokuForm"
@@ -187,7 +228,7 @@ if (dateBeanListSize == 31) {
 					<logic:equal value="${shainId }" name="tsukibetsuShiftNyuuryokuBeanList" property="shainId">
 					<html:hidden name="tsukibetsuShiftNyuuryokuBeanList" property="registFlg" value="true" indexed="true"/>
 						<tr height="20px" class="tblBody">
-							<td width="150px" align="center">
+							<td width="200px" align="center">
 								<bean:write property="shainName" name="tsukibetsuShiftNyuuryokuBeanList" />
 							</td>
 							<td width="40px" align="center" valign="middle">
@@ -584,14 +625,17 @@ if (dateBeanListSize >= 31) {
 					</logic:equal>
 				</logic:iterate>
 			</table>
-          </div>
+          </div>      
+
         </html:form>
-        <div style="margin-left:50px;">
+   
+        <table>
+      <div id="footer">
+           <div style="margin-left:50px;">
+
           <input value="凡例表示" type="button" class="lngButton"  onclick="openWindow()" />
         </div>
-      </div>
-      <div id="footer">
-        <table>
+
           <tr>
             <td id="footLeft">
             </td>
