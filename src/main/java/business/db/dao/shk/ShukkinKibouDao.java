@@ -127,7 +127,8 @@ public class ShukkinKibouDao extends AbstractDao{
             strSql.append("MSHIFT.SYMBOL, ");
             strSql.append("YEAR_MONTH_DAY ");
             strSql.append("FROM ");
-            strSql.append("T_SHIFT TSHIFT RIGHT OUTER JOIN ");
+            //上川　RIGHT OUTER JOINをLEFT OUTER JOINに修正
+            strSql.append("T_SHIFT TSHIFT LEFT OUTER JOIN ");
             strSql.append("M_SHIFT MSHIFT ON ");
             strSql.append("TSHIFT.KIBOU_SHIFT_ID = ");
             strSql.append("MSHIFT.SHIFT_ID ");
