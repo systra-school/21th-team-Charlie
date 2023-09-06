@@ -421,13 +421,7 @@
         <forward name="success" path="/pages/mth/tsukibetsuShiftNyuuryoku.jsp"/>
       </action>
       
-      <action
-        path="/syukkinKibouNyuuryokuRegist"
-        type="action.mth.TsukibetsuShiftNyuuryokuRegistAction"
-        name="tsukibetsuShiftNyuuryokuForm"
-        scope="session">
-        <forward name="success" path="/pages/shk/shukkinKibouNyuuryoku.jsp"/>
-      </action>
+     
       <!-- 月別シフト確認戻る -->
       <action
         path="/tsukibetsuShiftNyuuryokuBack"
@@ -487,6 +481,7 @@
         <forward name="success" path="/pages/cmn/shiftHanrei.jsp"/>
       </action>
       
+      <!-- 出勤希望入力初期表示-->
        <action
         path="/shukkinKibouNyuuryokuInit"
         type="action.shk.ShukkinKibouNyuuryokuInitAction"
@@ -498,6 +493,15 @@
         <action
         path="/shukkinKibouNyuuryokuSearch"
         type="action.shk.ShukkinKibouNyuuryokuSearchAction"
+        name="tsukibetsuShiftNyuuryokuForm"
+        scope="session">
+        <forward name="success" path="/pages/shk/shukkinKibouNyuuryoku.jsp"/>
+      </action>
+      <!-- 出勤希望入力登録-->
+      <!-- typeのパス変更　西-->
+       <action
+        path="/syukkinKibouNyuuryokuRegist"
+        type="action.shk.ShukkinKibouNyuuryokuRegistAction"
         name="tsukibetsuShiftNyuuryokuForm"
         scope="session">
         <forward name="success" path="/pages/shk/shukkinKibouNyuuryoku.jsp"/>
