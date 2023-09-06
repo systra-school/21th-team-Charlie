@@ -10,6 +10,8 @@ public final class LoginForm extends ValidatorForm {
 	String shainId;
 	// パスワード
 	String password;
+	// ユーザーの有無をチェック　村瀬
+	String check;
 
 	/**
 	 * @return shainId
@@ -34,6 +36,16 @@ public final class LoginForm extends ValidatorForm {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getCheck() {
+		return check;
+	}
+	/**
+	 * @param password セットする password
+	 */
+	public void setCheck(String check) {
+		this.check = check;
 	}
 
 

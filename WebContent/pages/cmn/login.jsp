@@ -2,6 +2,9 @@
 <%@page contentType="text/html; charset=Shift_JIS" pageEncoding="Shift_JIS"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%
+String check = (String)session.getAttribute("miss");
+%>
 <html>
 <head>
 	<meta http-equiv="Pragma" content="no-cache">
@@ -10,6 +13,18 @@
 	<html:javascript formName="loginForm" />
 	<title>ログイン画面</title>
 	<link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
+	
+	<!-- 文字化け解消 message.jsを呼び出している箇所にcharset="utf-8を追加 -->
+	<script type="text/javascript" src="/kikin_test/pages/js/message.js" charset="utf-8"></script>
+	<script type="text/javascript" language="Javascript1.1">
+
+	// ID・パスワードが違う場合エラーメッセージを表示
+ 	var errorMsg = '';
+	if ('<%=check %>' == 'miss') {
+		errorMsg = getMessage('E-MSG-000002', "");
+		alert(errorMsg);
+  	}
+	</script>
 </head>
 <body>
         <div id="wrapper">
