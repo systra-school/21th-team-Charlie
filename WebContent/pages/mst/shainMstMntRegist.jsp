@@ -57,13 +57,25 @@
                 errorMsg += getMessage('E-MSG-000001', strArr);
                 password.style.backgroundColor = 'red';
             }
-            // 社員名カナ
-            if (!checkHankakuKana(shainNameKanaVar)) {
+            
+            // 社員名カナ　2文字目以降にカナ以外が使われている場合の処理
+            
+            for (var character of shainNameKanaVar) {
+            	if (!checkHankakuKana(character)) {
+                    // エラー有り
+                    var strArr = ['社員名カナ'];
+                    errorMsg += getMessage('E-MSG-000003', strArr);
+                    shainNameKana.style.backgroundColor = 'red';
+                    break;
+                }
+			}
+            
+            /*if (!checkHankakuKana(shainNameKanaVar)) {
                 // エラー有り
                 var strArr = ['社員名カナ'];
                 errorMsg += getMessage('E-MSG-000003', strArr);
                 shainNameKana.style.backgroundColor = 'red';
-            }
+            }*/
 
             if (errorMsg) {
                 alert(errorMsg);
