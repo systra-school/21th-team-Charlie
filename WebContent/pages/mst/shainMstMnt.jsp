@@ -85,14 +85,25 @@
                         namedItem('shainMstMntBeanList['+ i +'].password').style.backgroundColor = 'red';
                     }
                 }
+
+                for (var character of shainNameKana) {
+                	if (!checkHankakuKana(character)) {
+                        // エラー有り
+                        var strArr = ['社員名カナ'];
+                        shainmeiKanaErrorMsg = getMessage('E-MSG-000003', strArr);
+                        namedItem('shainMstMntBeanList['+ i +'].shainNameKana').style.backgroundColor = 'red';
+                        break;
+                    }
+    			}
+                
                 // 社員名カナチェック
-                if (!shainmeiKanaErrorMsg) {
+                /*if (!shainmeiKanaErrorMsg) {
                     if (!checkHankakuKana(shainNameKana)) {
                         var strArr = ['社員名カナ'];
                         shainmeiKanaErrorMsg = getMessage('E-MSG-000003', strArr);
                         namedItem('shainMstMntBeanList['+ i +'].shainNameKana').style.backgroundColor = 'red';
                     }
-                }
+                }*/
 
                 if (passwordErrorMsg && shainmeiKanaErrorMsg) {
                     // パスワード 、社員名カナが共にエラーの場合
