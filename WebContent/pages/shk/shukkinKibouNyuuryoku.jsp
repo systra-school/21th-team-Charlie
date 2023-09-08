@@ -110,9 +110,9 @@
         </table>
       </div>
       <div id="gymBody" style="overflow: hidden;" >
-      <div style="margin-left:80px;">
+      <div style="margin-left:20px;">
       
-         <div id="bodyLeftTbl" style="overflow-x: auto;overflow-y: hidden;width: 1100px;height:120px; ">
+         <div id="bodyLeftTbl" ;height:120px; ">
         <html:form action="/tsukibetsuShiftNyuuryokuInit.do" >
           <div style="margin-left:25px;">
             <div style="height: 25px;">
@@ -140,7 +140,7 @@
             
             <!-- 右側テーブル --> 
             
-            <table width="1500px" cellpadding="0" cellspacing="0" border="1"> 
+            <table width="1450px" cellpadding="0" cellspacing="0" border="1"> 
     
 				<tr class="tblHeader">
 					<td ></td>
