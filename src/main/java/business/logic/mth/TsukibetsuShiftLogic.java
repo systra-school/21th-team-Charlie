@@ -11,6 +11,7 @@ import java.net.URLDecoder;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,17 +24,18 @@ import org.bbreak.excella.reports.tag.ColRepeatParamParser;
 import org.bbreak.excella.reports.tag.RowRepeatParamParser;
 import org.bbreak.excella.reports.tag.SingleParamParser;
 
-import form.common.DateBean;
-import form.mth.TsukibetsuShiftKakuninBean;
-import form.mth.TsukibetsuShiftKakuninForm;
-
 import action.mth.TsukibetsuShiftKakuninPrintAction;
 import business.db.dao.mth.TsukibetsuShiftDao;
 import business.dto.LoginUserDto;
-import business.dto.mth.TsukibetsuBaseShiftDto;
+import business.dto.bse.KihonShiftDto;
+import business.dto.mst.ShainMstMntDto;
 import business.dto.mth.TsukibetsuShiftDto;
+import business.logic.mst.ShainMstMntLogic;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.CommonUtils;
+import form.common.DateBean;
+import form.mth.TsukibetsuShiftKakuninBean;
+import form.mth.TsukibetsuShiftKakuninForm;
 
 /**
  * 説明：希望出勤日入力処理のロジック
@@ -351,4 +353,79 @@ public class TsukibetsuShiftLogic {
         reportProcessor.addReportBookExporter(excelOutePuteStreamExporter);
         reportProcessor.process(outputBook);
     }
+    
+    //↓getMonthlyDataメソッド追記　西
+    
+    public Map<String,List<TsukibetsuShiftDto>> getMonthlyData( List<DateBean> dateBeanList,  Map<String, KihonShiftDto> kihonShiftDataMap, 
+    		Map<String, String> shiftCmbMap,  LoginUserDto loginUserDto) throws Exception{
+    	
+    	Map<String,List<TsukibetsuShiftDto>> shiftMstMntDto = new LinkedHashMap<String,List<TsukibetsuShiftDto>>();
+    	//月の最初の日の曜日
+    	int firstYoubi = 0;
+    	if(dateBeanList.get(0).getYoubi().equals("土")) {
+    		firstYoubi = 0;
+    	}else if(dateBeanList.get(0).getYoubi().equals("日")) {
+    		firstYoubi = 1;
+    	}else if(dateBeanList.get(0).getYoubi().equals("月")) {
+    		firstYoubi = 2;
+    	}else if(dateBeanList.get(0).getYoubi().equals("火")) {
+    		firstYoubi = 3;
+    	}else if(dateBeanList.get(0).getYoubi().equals("水")) {
+    		firstYoubi = 4;
+    	}else if(dateBeanList.get(0).getYoubi().equals("木")) {
+    		firstYoubi = 5;
+    	}else if(dateBeanList.get(0).getYoubi().equals("金")) {
+    		firstYoubi = 6;
+    	}
+    	
+    	//基本シフトテータの配列化
+    	Map<String, String[]> kihonShiftMap = new HashMap<String, String[]>();
+    	
+    	for (Map.Entry<String, KihonShiftDto> entry : kihonShiftDataMap.entrySet()) {
+    		KihonShiftDto value = entry.getValue();
+    		String[] array = {
+    				value.getShiftIdOnSaturday(), value.getShiftIdOnSunday(), value.getShiftIdOnMonday(), value.getShiftIdOnTuesday(), value.getShiftIdOnWednesday(),
+    				value.getShiftIdOnThursday(),value.getShiftIdOnFriday()
+    		};
+    		kihonShiftMap.put(entry.getKey(), array);
+		}
+    	//各社員の基本シフトデータを元に１か月分のシフトデータを作成する
+    	
+    	 // 社員情報を取得する
+    	// ロジック生成
+        ShainMstMntLogic shainMstMntLogic = new ShainMstMntLogic();
+        List<ShainMstMntDto> mshainList = shainMstMntLogic.getShainData(loginUserDto, false);
+    	
+    	//基本シフトテーブルのデータを社員ごとに読み込む
+    	for(String key : kihonShiftDataMap.keySet()) {
+    		List<TsukibetsuShiftDto> tsukibetsuShiftList = new ArrayList<TsukibetsuShiftDto>();
+    		int cnt = firstYoubi;
+    		
+    		//日付けごとにデータを入力する
+    		for(DateBean date : dateBeanList) {
+    			TsukibetsuShiftDto dto = new TsukibetsuShiftDto();
+    			 dto.setShainId(key);
+    			 
+    			 ShainMstMntDto shain = null;
+    			 for(ShainMstMntDto mshain: mshainList) {
+    				 if(mshain.getShainId().equals(key)) {
+    					 shain = mshain;
+    				 }
+    			 }
+                 dto.setShainName(shain.getShainName());
+                 dto.setYearMonthDay(date.getYearMonthDay());
+                 dto.setShiftId(kihonShiftMap.get(key)[cnt % 7]);
+                 if(!(dto.getShiftId().equals("-1"))) {
+                	 dto.setSymbol(shiftCmbMap.get(dto.getShiftId()));
+                 }
+                 cnt++;
+                 
+                 tsukibetsuShiftList.add(dto);
+            }
+    		shiftMstMntDto.put(key,tsukibetsuShiftList);
+    	}
+    	
+    	return shiftMstMntDto;
+	}
+    
 }

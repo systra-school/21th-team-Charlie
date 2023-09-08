@@ -427,6 +427,7 @@ public class CommonUtils {
             }
 
             StringBuffer dow = new StringBuffer();
+            
             switch (calendar.get(Calendar.DAY_OF_WEEK)) {
               case Calendar.SUNDAY:
                   dow.append(DayOfWeek.SUNDAY.getRyaku());

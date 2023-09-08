@@ -6,15 +6,16 @@
  */
 package business.logic.mst;
 
-import static constant.DbConstant.M_shain;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+
 import business.db.dao.mst.ShainMstMntDao;
 import business.dto.LoginUserDto;
 import business.dto.mst.ShainMstMntDto;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.CommonUtils;
+import constant.DbConstant.M_shain;
 
 /**
  * 説明：社員マスタメンテナンス処理のロジック
@@ -97,10 +98,13 @@ public class ShainMstMntLogic {
 
     /**
      * 社員マスタ情報を取得する。
+     * ↓＠param追記、引数にboolean flg追記　西
+     * @param ログインユーザー情報
+     * @param ログインユーザーのレコードを削除するか true→削除する、false→削除しない
      * @return 社員マスタリスト
      * @author naraki
      */
-    public List<ShainMstMntDto> getShainData(LoginUserDto loginUserDto) throws SQLException{
+    public List<ShainMstMntDto> getShainData(LoginUserDto loginUserDto, boolean flg) throws SQLException{
 
         // 社員マスタDao
         ShainMstMntDao shainMstMntDao = new ShainMstMntDao();
@@ -109,16 +113,18 @@ public class ShainMstMntLogic {
         List<ShainMstMntDto> mShainList = shainMstMntDao.getShainAllList();
 
         // 自分をリストから省く
-        // 削除対象
+        // 削除対象　↓if文追記　西
+        
         ShainMstMntDto removeMshainDto = null;
-
-        for (ShainMstMntDto mshainDto : mShainList) {
-            String shainId = mshainDto.getShainId();
-
-            if (loginUserDto.getShainId().equals(shainId)) {
-                removeMshainDto = mshainDto;
-                break;
-            }
+        if(flg) {
+        	for (ShainMstMntDto mshainDto : mShainList) {
+        		String shainId = mshainDto.getShainId();
+        		
+        		if (loginUserDto.getShainId().equals(shainId)) {
+        			removeMshainDto = mshainDto;
+        			break;
+        		}
+        	}
         }
 
         if (!CheckUtils.isEmpty(removeMshainDto)) {

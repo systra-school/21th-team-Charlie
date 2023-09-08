@@ -61,6 +61,14 @@ if (listSize > intShowLength) {
         // サブミット
         doSubmit('/kikin_test/tsukibetsuShiftNyuuryokuShukkinKibou.do');
     }
+    
+    /**
+     * 基本シフト反映 追記 西
+     */
+    function submitKihonShift() {
+        // サブミット
+        doSubmit('/kikin_test/tsukibetsuShiftNyuuryokuKihonShift.do');
+    }
 
     /**
      * 登録
@@ -549,7 +557,8 @@ if (listSize > intShowLength) {
       <div id="footer">
       <div style="margin-left:50px;">
           <input value="凡例表示" type="button" class="lngButton"  onclick="openWindow()" />
-          <input value="基本シフト反映" type="button" class="lngButton"  />
+          <!-- onclickの指先submitKihonShift追記　西 -->
+          <input value="基本シフト反映" type="button" class="lngButton"   onclick="submitKihonShift()"/>
           <input value="出勤希望日反映" type="button" class="lngButton"  onclick="submitShukkinKibou()" />
         </div>
         <table>

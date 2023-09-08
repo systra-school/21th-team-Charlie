@@ -28,9 +28,9 @@ import business.logic.mst.ShainMstMntLogic;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.ComboListUtilLogic;
 import constant.CommonConstant;
-import constant.RequestSessionNameConstant;
 import constant.CommonConstant.BunruiId;
 import constant.DbConstant.Mbunrui;
+import constant.RequestSessionNameConstant;
 import form.mst.ShainMstMntBean;
 import form.mst.ShainMstMntForm;
 
@@ -87,8 +87,8 @@ public class ShainMstMntUpdateAction extends Action{
         // 更新・削除処理
         shainMstMntLogic.updateMshain(mshainDtoList, loginUserDto);
 
-        // 社員情報を再検索する
-        mshainDtoList = shainMstMntLogic.getShainData(loginUserDto);
+        // 社員情報を再検索する ↓引数true追記　西
+        mshainDtoList = shainMstMntLogic.getShainData(loginUserDto, true);
 
         if (CheckUtils.isEmpty(mshainDtoList)) {
             // データなし
