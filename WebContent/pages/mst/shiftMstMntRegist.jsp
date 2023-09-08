@@ -43,6 +43,8 @@
         var errorMsg = '';
         // From - To エラーメッセージ
         var fromToErrMsg = '';
+     	// エラーメッセージ
+     	var errorMsg = '';
 
         // 時間チェック
         with (document.forms[0]) {
@@ -58,6 +60,7 @@
           endTime.style.backgroundColor = 'white';
           breakTime.style.backgroundColor = 'white';
 
+      	 
           if (!checkTime(varStartTime)) {
               var strArr = ['開始時間'];
               startTimeErrMsg = getMessage('E-MSG-000004', strArr);
@@ -75,11 +78,13 @@
               breakTimeErrMsg = getMessage('E-MSG-000004', strArr);
               breakTime.style.backgroundColor = 'red';
           }
+          
 
           // from - to のチェック
           if (!checkTimeCompare(varStartTime, varEndTime)) {
-            if (checkTime(startTime) && checkTime(endTime)) {
-                fromToErrMsg = getMessageCodeOnly('E-MSG-000005');
+        	  //開始時間＞終了時間の時エラー表示されなかったのを修正　有吉
+            if (checkTime(varStartTime) && checkTime(varEndTime)) {
+            	fromToErrMsg = getMessageCodeOnly('E-MSG-000005');
                 startTime.style.backgroundColor = 'red';
                 endTime.style.backgroundColor = 'red';
             }
