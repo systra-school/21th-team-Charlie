@@ -116,8 +116,8 @@ if (listSize > intShowLength) {
         </table>
       </div>
       
-      <!--  <div id="gymBody" style="overflow: hidden;">-->
-      <div id="gymBody" style="overflow:auto;">
+      <!--  <div id="gymBody" style="overflow-y: hidden;"へ変更 height: 530px;を追加　伊藤>-->
+      <div id="gymBody" style="overflow-y: hidden; height: 530px;">
       
         <html:form action="/tsukibetsuShiftNyuuryokuPage" >
           
@@ -162,7 +162,8 @@ if (listSize > intShowLength) {
                   </table>
                 </td>
                 <td>
-                  <div style="overflow-x: auto;overflow-y: hidden; width:985px;height: <%=heightSize * (listSize + 2) + 18 %>px; text-align:center;">
+                <!--  <style="overflow-y: hidden;"を追記 width:1000px;へ変更　伊藤>-->
+                  <div style="overflow-x: auto;overflow-y: hidden; width:1000px;height: <%=heightSize * (listSize + 2) + 18 %>px; text-align:center;">
                     <table class="tblHeader" border="1" cellpadding="0" cellspacing="0">
                       <tr height="<%=heightSize %>px">
                         <td width="40px" align="center">

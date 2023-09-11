@@ -105,7 +105,7 @@
 		</table>
 	</div>
 	
-	<!-- C³•’Ç‰Á ˆÉ“¡@height: 470px;‚©‚çheight: 530px;‚ÉC³ -->
+	<!-- C³•’Ç‰Á ˆÉ“¡@overflow-y: hidden‚ğ’Ç‰Á & height: 470px;‚©‚çheight: 530px;‚ÉC³ -->
 	<div id="gymBody" style="overflow-y: hidden; height: 530px;">
 		<html:form action="/shukkinKibouKakuninInit">
 			<div style="margin-left: 50px;">
@@ -235,7 +235,7 @@
 													property="youbi" name="dateBeanList" /><br></td>
 										</logic:iterate>
 	
-										<!-- 17s–Ú‚Ü‚Å•\¦‚³‚ê‚Ä‚¢‚½‚à‚Ì‚ğ15s–Ú‚Ü‚Å•\¦‚·‚é‚æ‚¤showlength‚©‚çlength=15‚Ö•ÏX@ˆÉ“¡ -->
+										
 									</tr>
 									<logic:iterate offset="offset" length="<%=showLength%>"
 										id="tsukibetsuShiftKakuninBeanList"
