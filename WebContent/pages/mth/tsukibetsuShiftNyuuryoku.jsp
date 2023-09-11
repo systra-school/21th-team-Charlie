@@ -163,6 +163,7 @@ if (listSize > intShowLength) {
                 </td>
                 <td>
                 <!--  <style="overflow-y: hidden;"を追記 width:1000px;へ変更　伊藤>-->
+                <!--  <style="overflow-y: hidden;"を追記 width:1000px;へ変更　伊藤>-->
                   <div style="overflow-x: auto;overflow-y: hidden; width:1000px;height: <%=heightSize * (listSize + 2) + 18 %>px; text-align:center;">
                     <table class="tblHeader" border="1" cellpadding="0" cellspacing="0">
                       <tr height="<%=heightSize %>px">
