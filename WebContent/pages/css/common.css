@@ -60,9 +60,13 @@ errorbody {
 /*
 * 業務body定義
 */
+/*
+* 縦スクロールを非表示にするためoverflow-y:hiddenを追加　伊藤
+*/
 #gymBody {
     height: 500px;
     overflow: auto;
+    overflow-y:hidden;
 }
 
 /*
