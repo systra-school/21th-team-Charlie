@@ -19,5 +19,6 @@ public abstract class ShukkinKibouAbstractAction extends Action {
     // ログ出力クラス
     protected Log log = LogFactory.getLog(this.getClass());
     // 表示データ数
-    protected final int SHOW_LENGTH = 19;
+    /*SHOW_LENGTHの長さを修正19→17　上川*/
+    protected final int SHOW_LENGTH = 17;
 }
