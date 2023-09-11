@@ -15,10 +15,8 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import constant.DbConstant.Mshukujitsu;
-
-
 import business.db.dao.AbstractDao;
+import constant.DbConstant.Mshukujitsu;
 
 /**
  * 説明：共通部品用Ｄａｏ
@@ -80,35 +78,27 @@ public class CommonUtilsDao extends AbstractDao {
      * @author naraki
      */
     public List<String> getShukujitsuList(String yearMonth) throws SQLException {
-
         List<String> rtnList =new ArrayList<String>();
-
         try {
             // コネクション接続
             this.connect();
-
             StringBuffer strSql = new StringBuffer();
             strSql.append("SELECT ");
             strSql.append(Mshukujitsu.YEAR_MONTH_DAY.getName());
             strSql.append(" FROM ");
             strSql.append(Mshukujitsu.TABLE_NAME.getName());
-            strSql.append(" WHERE SUBSTRING(");
+            //年月日のデータが入っているレコードを選択するよう変更　西
+            strSql.append(" WHERE ");
             strSql.append(Mshukujitsu.YEAR_MONTH_DAY.getName());
-            strSql.append(", 1, 6)");
-
+            strSql.append("> 0");
             PreparedStatement ps = connection.prepareStatement(strSql.toString());
-
             // ログ出力
             log.info(ps);
-
             // 実行
             ResultSet rs = ps.executeQuery();
-
             // 取得結果セット
-            if (rs.next()) {
+            while (rs.next()) {
                 rtnList.add(rs.getString(Mshukujitsu.YEAR_MONTH_DAY.getName()));
-            } else {
-                return null;
             }
         } catch (SQLException e) {
             // 例外発生
