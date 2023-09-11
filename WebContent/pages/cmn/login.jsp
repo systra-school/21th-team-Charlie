@@ -29,19 +29,21 @@ String check = (String)session.getAttribute("miss");
 <body>
         <div id="wrapper">
         <div id="header">
+        <div align="center">
             <table>
               <tr>
                   <td id="headLeft">
                     　
                   </td>
                   <td id="headCenter">
-                    ログイン
+                    ログイン　　　　　
                   </td>
                   <td id="headRight">
                     　
                   </td>
               </tr>
             </table>
+            </div>
         </div>
 
 
