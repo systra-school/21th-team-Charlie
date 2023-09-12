@@ -37,6 +37,8 @@
     	var startTimeNullErrMsg = '';    	
     	//終了時間空白エラーメッセージ　追加：村瀬
     	var endTimeNullErrMsg = '';
+    	//休憩時間空白エラーメッセージ　追加：村瀬
+    	var breakTimeNullErrMsg = '';
     	
         // 開始時間エラーメッセージ
         var startTimeErrMsg = '';
@@ -58,7 +60,7 @@
           // 終了時間を取得する。
           var varEndTime = endTime.value;
           // 休憩時間を取得する。
-          var barBreakTime = breakTime.value;
+          var varBreakTime = breakTime.value;
 
           // 背景色をクリアする
           startTime.style.backgroundColor = 'white';
@@ -78,6 +80,12 @@
               endTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
               endTime.style.backgroundColor = 'red';
           }
+          
+          if (!checkRequired(varBreakTime)) {
+              var strArr = ['休憩時間'];
+              breakTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
+              breakTime.style.backgroundColor = 'red';
+          }
 
       	 
           if (!checkTime(varStartTime)) {
@@ -92,7 +100,7 @@
               endTime.style.backgroundColor = 'red';
           }
 
-          if (!checkTime(barBreakTime)) {
+          if (!checkTime(varBreakTime)) {
               var strArr = ['休憩時間'];
               breakTimeErrMsg = getMessage('E-MSG-000004', strArr);
               breakTime.style.backgroundColor = 'red';
@@ -111,7 +119,7 @@
         }
 
         // エラーメッセージ
-        errorMsg = startTimeNullErrMsg + endTimeNullErrMsg + startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
+        errorMsg = startTimeNullErrMsg + endTimeNullErrMsg + breakTimeNullErrMsg + startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
 
         if (errorMsg) {
             alert(errorMsg);
