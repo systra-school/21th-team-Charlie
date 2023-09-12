@@ -223,7 +223,8 @@
                     <html:text style="text-align:center" size="9" maxlength="5" name="kinmuJissekiNyuryokuKakuninList" property="breakTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="jikangaiTime" /><br>
+                  <!--property‚ðjikangaiTime¨jitsudouTime‚Ö•ÏX@¼ -->
+                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="jitsudouTime" /><br>
                   </td>
                   <td width="100px" align="center">
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="jikangaiTime" /><br>
