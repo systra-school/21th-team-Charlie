@@ -12,13 +12,12 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
-import exception.CommonException;
-
 import business.db.dao.act.KinmuJissekiDao;
 import business.dto.LoginUserDto;
 import business.dto.act.KinmuJissekiDto;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.CommonUtils;
+import exception.CommonException;
 
 /**
  * 説明：ログイン処理のロジック
@@ -212,6 +211,41 @@ public class KinmuJissekiLogic {
             } else {
                 // シフトがある場合
 
+                
+                /*
+                 * 以下追記　西
+                 * 計算処理を行うために各時間を
+                 * 秒に変換する。
+                 */
+                long startTimeShiftLong = CommonUtils.getSecond(startTimeShift);
+                long endTimeShiftLong = CommonUtils.getSecond(endTimeShift);
+                long breakTimeShiftLong = CommonUtils.getSecond(breakTimeShift);
+
+                // 時間外働時間(実働時間 - (シフト終了時間 - シフト開始時間) )
+                jitsudouTimeS = (endTimeLong - startTimeLong - breakTimeLong); // 実働時間(秒)
+                long JikangaiTimeS = jitsudouTimeS - (endTimeShiftLong - startTimeShiftLong - breakTimeShiftLong); // 秒
+
+                if (JikangaiTimeS < 0) {
+                    // 休憩が多かったとき
+                	JikangaiTimeS = 0;
+                }
+
+                // 秒を60で除算する → 分に変換。
+                long jikangaiTimeM = JikangaiTimeS / 60; // 分
+                // 分を60で除算する → 時に変換。
+                long jikangaiTimeH = jikangaiTimeM / 60; // 時
+                // 分を60で除算したときの余り → 分を算出する。
+                jitsudouTimeM = jitsudouTimeM % 60; // 余りが分になる
+
+                // 算出した値を画面へ表示する形式にする hh:mm
+                StringBuffer jikangaiTime = new StringBuffer();
+                jikangaiTime.append(CommonUtils.padWithZero(String.valueOf(jikangaiTimeH), 2));
+                jikangaiTime.append(colon);
+                jikangaiTime.append(CommonUtils.padWithZero(String.valueOf(jitsudouTimeM), 2));
+                
+                // 時間外時間を勤務実績Dtoの時間外へセット *ここまで追記西
+                kinmuJissekiDto.setJikangaiTime(jikangaiTime.toString());
+                
                 // 実働時間を勤務実績Dtoの勤務実績へセット
                 kinmuJissekiDto.setJitsudouTime(jitsudouTime.toString());
             }
