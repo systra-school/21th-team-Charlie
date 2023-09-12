@@ -70,7 +70,7 @@
           </tr>
         </table>
       </div>
-      <div id="gymBody" style="overflow: hidden;">
+      <div id="gymBody" style="overflow: hidden; height: 530px;" >
         <div style="margin-left:10px;">
           <html:form action="/shukkinKibouKakuninInit" >
             ï\é¶îNåéÅF
@@ -85,8 +85,8 @@
             <bean:write name="shukkinKibouKakuninForm" property="cntPage"/>/
             <bean:write name="shukkinKibouKakuninForm" property="maxPage"/>
             
-            <div style="overflow: hidden; height: 530px; width: 1150px; margin-left:100px;" >
-              <table width="1100px" cellpadding="0" cellspacing="0">
+     
+              <table width="1100px"  cellpadding="0" cellspacing="0">
                 <tr>
                   <td width="150px" valign="top">
                     <table border="1" cellpadding="0" cellspacing="0">
@@ -100,7 +100,7 @@
                         é–àıñº
                         </td>
                       </tr>
-                      <logic:iterate offset="offset" length="<%=showLength %>" id="shukkinKibouKakuninBeanList" name="shukkinKibouKakuninForm" property="shukkinKibouKakuninBeanList">
+                      <logic:iterate offset="offset" length="17" id="shukkinKibouKakuninBeanList" name="shukkinKibouKakuninForm" property="shukkinKibouKakuninBeanList">
                         <tr class="tblBody">
                           <td width="150px" align="center" class="tblBody">
                             <bean:write property="shainName" name="shukkinKibouKakuninBeanList"/><br>
@@ -237,7 +237,7 @@
                               </td>
                           </logic:iterate>
                         </tr>
-                        <logic:iterate offset="offset"  length="<%=showLength %>" id="shukkinKibouKakuninBeanList" name="shukkinKibouKakuninForm" property="shukkinKibouKakuninBeanList">
+                        <logic:iterate offset="offset"  length="17" id="shukkinKibouKakuninBeanList" name="shukkinKibouKakuninForm" property="shukkinKibouKakuninBeanList">
                           <tr class="tblBody">
                             <td width="40px" align="center" valign="middle" class="tblBody">
                               <bean:write property="symbol01" name="shukkinKibouKakuninBeanList" />
@@ -347,7 +347,7 @@
                   </td>
                 </tr>
               </table>
-            </div>
+         
           </html:form>
         </div>
       </div>
