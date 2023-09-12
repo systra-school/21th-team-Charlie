@@ -33,6 +33,11 @@
      */
     function shiftMstMntRegist() {
 
+    	//開始時間空白エラーメッセージ　追加：村瀬
+    	var startTimeNullErrMsg = '';    	
+    	//終了時間空白エラーメッセージ　追加：村瀬
+    	var endTimeNullErrMsg = '';
+    	
         // 開始時間エラーメッセージ
         var startTimeErrMsg = '';
         // 終了時間エラーメッセージ
@@ -59,6 +64,20 @@
           startTime.style.backgroundColor = 'white';
           endTime.style.backgroundColor = 'white';
           breakTime.style.backgroundColor = 'white';
+          
+          
+          //空白登録時にエラー表示　村瀬
+          if (!checkRequired(varStartTime)) {
+                var strArr = ['開始時間'];
+                startTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
+                startTime.style.backgroundColor = 'red';
+            }
+          
+          if (!checkRequired(varEndTime)) {
+              var strArr = ['終了時間'];
+              endTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
+              endTime.style.backgroundColor = 'red';
+          }
 
       	 
           if (!checkTime(varStartTime)) {
@@ -92,7 +111,7 @@
         }
 
         // エラーメッセージ
-        errorMsg = startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
+        errorMsg = startTimeNullErrMsg + endTimeNullErrMsg + startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
 
         if (errorMsg) {
             alert(errorMsg);
