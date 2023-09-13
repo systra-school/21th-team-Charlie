@@ -146,8 +146,19 @@ String color = "";
                               }
                    %>
 
-                  <td width="30px" align="center" class='<%=color %>'">
-                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="youbi" /><br>
+                  <td width="30px" align="center" class='<%=color %>'>
+                  <!-- èjì˙ÇÃï\ãLÇÅhèjÅhÇ…Ç∑ÇÈÇΩÇﬂÇÃí«ãLÅ@êº -->
+                    <%
+                       if ((boolean)shukujitsuFlg){
+                    	   %>
+                    	    èj<br>
+                    	    <%
+                       } else{
+                    	   %>
+                    	   <bean:write name="kinmuJissekiNyuryokuKakuninList" property="youbi" /><br>
+                    	   <%
+                       }
+                       %>
                   </td>
                   <td width="50px" align="center" style="vertical-align: middle;">
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="symbol" /><br>

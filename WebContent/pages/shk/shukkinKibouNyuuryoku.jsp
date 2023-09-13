@@ -219,7 +219,18 @@ if (dateBeanListSize == 31) {
 						}
 						%>
 						<td width="40px" align="center" class="<%=color%>">
+						<!-- èjì˙ÇÃï\ãLÇÅhèjÅhÇ…Ç∑ÇÈÇΩÇﬂÇÃí«ãLÅ@êº -->
+						<%
+	                       if ((boolean)shukujitsuFlg){
+                   	   %>
+                   	    	èj
+                   	    <%
+	                       } else{
+                   	   	%>
 							<bean:write property="youbi" name="dateBeanList" />
+						<%
+	                       }
+	                     %>
 						</td>
 					</logic:iterate>
 				</tr>
