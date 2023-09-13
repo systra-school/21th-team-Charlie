@@ -61,6 +61,13 @@
 
         // 一覧のサイズ
         var listSize = <%= beanListSize %>;
+        
+      	//開始時間空白エラーメッセージ　追加：村瀬
+    	var startTimeNullErrMsg = '';    	
+    	//終了時間空白エラーメッセージ　追加：村瀬
+    	var endTimeNullErrMsg = '';
+    	//休憩時間空白エラーメッセージ　追加：村瀬
+    	var breakTimeNullErrMsg = '';
 
         // 開始時間エラーメッセージ
         var startTimeErrMsg = '';
@@ -89,6 +96,25 @@
                 namedItem('shiftMstMntBeanList['+ i +'].startTime').style.backgroundColor = 'white';
                 namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'white';
                 namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'white';
+                
+              //空白登録時にエラー表示　村瀬
+                if (!checkRequired(startTime)) {
+                    var strArr = ['開始時間'];
+                    startTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
+                    namedItem('shiftMstMntBeanList['+ i +'].startTime').style.backgroundColor = 'red';
+                  }
+                
+                if (!checkRequired(endTime)) {
+                    var strArr = ['終了時間'];
+                    endTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
+                    namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'red';
+                }
+                
+                if (!checkRequired(breakTime)) {
+                    var strArr = ['休憩時間'];
+                    breakTimeNullErrMsg = getMessage('E-MSG-000001', strArr);
+                    namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'red';
+                }
 
                 // 時間チェック
                 if (!startTimeErrMsg) {
@@ -126,7 +152,7 @@
         }
 
         // エラーメッセージ
-        errorMsg = startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
+        errorMsg = startTimeNullErrMsg + endTimeNullErrMsg + breakTimeNullErrMsg + startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
 
         if (errorMsg) {
             alert(errorMsg);
