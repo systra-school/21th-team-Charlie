@@ -2,8 +2,10 @@
 * body定義
 */
 body {
-    background-color:#66CCFF;
+    background-image:url("newyork.jpg");
     overflow: hidden;
+	   background-size:1500px;
+       background-repeat:no-repeat;
 }
 errorbody {
     background-color: red;
@@ -12,6 +14,48 @@ errorbody {
     width:100%;
     padding:0px;
 }
+/* ログイン画面バック */
+.picture{
+	   background-image:url("mugi.jpg");
+	   background-repeat:no-repeat;
+	   background-position:center center;
+	   background-size:contain;
+	   border-radius:50%;
+	   width:100%;
+	   height:100%;
+}
+
+/* menu jspバック */
+.mugi5{
+	   background-image:url("mugi5.jpg");
+	   background-repeat:no-repeat;
+	   background-position:center center;
+	   background-size:80%;
+	   width:100%;
+	   height:100%;
+}
+
+.mugi7{					/* 基本シフト登録画面 */
+	 background-image:url("mugi7.jpg");
+	  background-repeat:no-repeat;
+	  background-position:150px 250px;
+	  	 background-size:22%;
+}
+.mugi8{
+	 background-image:url("mugi8.jpg");
+	  background-repeat:no-repeat;
+	  background-position:1200px 250px;
+	  	 background-size:15%;
+}
+.mugi9{                          /*  基本シフト確認画面バック */
+	 background-image:url("mugi9.jpg");
+	  background-repeat:no-repeat;
+	  background-position:150px 250px;
+	  	 background-size:25%;
+}
+
+
+
 
 
 /*
@@ -21,7 +65,7 @@ errorbody {
     width: 100%;
     margin: 0px;
     padding: 5px;
-    background-color: #66CCFF;
+/*     background-color: #66CCFF; */
 }
 
 /*

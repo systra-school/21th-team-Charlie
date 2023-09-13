@@ -42,6 +42,7 @@
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+  <div class="mugi9">
     <div id="wrapper">
       <div id="header">
         <table>
@@ -194,6 +195,7 @@
           </tr>
         </table>
       </div>
+    </div>
     </div>
   </body>
 </html>

@@ -138,7 +138,11 @@
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="wrapper">
+  <div class="mugi10.jpg">
+  <div class="mugi11.jpg">
+  <div class="mugi12.jpg">
+  <div class="mugi13.jpg">
+   <div id="wrapper">
       <div id="header">
         <table>
           <tr>
@@ -222,6 +226,10 @@
           </tr>
         </table>
       </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
   </body>
 </html>

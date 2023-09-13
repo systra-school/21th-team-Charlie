@@ -171,6 +171,8 @@
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+ 
+
     <div id="wrapper">
       <div id="header">
         <table>
@@ -189,6 +191,7 @@
         </table>
       </div>
       <div id="gymBody">
+       <div class="mugi10.jpg">
         <html:form action="/shiftMstMntUpdate">
           <div style="width: 600px; margin-left:300px;">
             <table class="tblHeader" border="1" cellpadding="0" cellspacing="0">
@@ -251,6 +254,7 @@
             </table>
           </div>
         </html:form>
+        	</div>
       </div>
       <div id="footer">
         <table>
@@ -278,5 +282,8 @@
         </table>
       </div>
     </div>
+    
+
+
   </body>
 </html>

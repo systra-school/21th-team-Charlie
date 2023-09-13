@@ -91,6 +91,7 @@
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+
     <div id="wrapper">
       <div id="header">
         <table>
@@ -665,5 +666,6 @@ if (dateBeanListSize >= 31) {
         </table>
       </div>
     </div>
+       </div>
   </body>
 </html>

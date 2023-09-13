@@ -27,6 +27,7 @@ String check = (String)session.getAttribute("miss");
 	</script>
 </head>
 <body>
+<div class="picture">
         <div id="wrapper">
         <div id="header">
         <div align="center">
@@ -77,6 +78,7 @@ String check = (String)session.getAttribute("miss");
 	        </table>
 	    </div>
 
+		</div>
 		</div>
 		</body>
 </html>
