@@ -33,7 +33,7 @@
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="kengenId"
                          value="<%=CommonConstant.Kengen.KANRISYA.getId() %>">
-                メニュー(管理者)
+                　　メニュー(管理者)
             </logic:equal>
 
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
@@ -45,8 +45,8 @@
             <td id="headRight">
             	<!-- 修正＆追加 村瀬 inputタグをコメントアウト＆htmlタグを追加 -->
 				<html:form action="/logout">
-             		 <input type="submit" value="ログアウト" class="smlButton" />
-            	</html:form> 
+             		 <input class="logoutbutton" type="submit" value="ログアウト" class="smlButton" />
+            	</html:form>
 				<!-- <input value="ログアウト" type="button" class="smlButton" onclick="logout()" />-->
             </td>
           </tr>

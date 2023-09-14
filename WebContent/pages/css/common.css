@@ -1,12 +1,12 @@
 /*
 * body定義
 */
-body {
+/*body {
     background-image:url("newyork.jpg");
     overflow: hidden;
 	   background-size:1500px;
        background-repeat:no-repeat;
-}
+}*/
 errorbody {
     background-color: red;
 }
@@ -15,25 +15,40 @@ errorbody {
     padding:0px;
 }
 /* ログイン画面バック */
-.picture{
-	   background-image:url("mugi.jpg");
-	   background-repeat:no-repeat;
-	   background-position:center center;
-	   background-size:contain;
-	   border-radius:50%;
-	   width:100%;
-	   height:100%;
+.newyork {
+		margin: 0; /* マージンをリセットして余白を削除 */
+    	padding: 0; /* パディングをリセットして余白を削除 */
+    	background-image: url('newyork.jpg'); /* 画像ファイルのパスを指定 */
+    	background-size: cover; /* 画像を要素に合わせて拡大・縮小 */
+    	background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
+    	background-attachment: fixed; /* スクロールに追従しないように固定 */	
 }
+
+
+.picture{
+
+	background-attachment: fixed;
+	height:100%;
+	margin: 0; /* マージンをリセットして余白を削除 */
+	padding: 0; /* パディングをリセットして余白を削除 */
+	background-image: url('mugi.jpg'); /* 画像ファイルのパスを指定 */
+	background-size: cover; /* 画像を要素に合わせて拡大・縮小 */
+	background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
+	background-attachment: fixed; /* スクロールに追従しないように固定 */	
+}  
 
 /* menu jspバック */
 .mugi5{
-	   background-image:url("mugi5.jpg");
-	   background-repeat:no-repeat;
-	   background-position:center center;
-	   background-size:80%;
-	   width:100%;
-	   height:100%;
+	background-attachment: fixed;
+	height:100%;
+	margin: 0; /* マージンをリセットして余白を削除 */
+	padding: 0; /* パディングをリセットして余白を削除 */
+	background-image: url('mugi3.jpg'); /* 画像ファイルのパスを指定 */
+	background-size: cover; /* 画像を要素に合わせて拡大・縮小 */
+	background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
+	background-attachment: fixed; /* スクロールに追従しないように固定 */    	
 }
+
 
 .mugi7{					/* 基本シフト登録画面 */
 	 background-image:url("mugi7.jpg");

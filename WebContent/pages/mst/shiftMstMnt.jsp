@@ -11,23 +11,26 @@
  * 1.0  2010/09/13 Kazuya.Naraki
  */
 %>
-<%@page contentType="text/html; charset=Shift_JIS" pageEncoding="Shift_JIS"%>
+<%@page contentType="text/html; charset=Shift_JIS"
+	pageEncoding="Shift_JIS"%>
 <%@ page import="constant.RequestSessionNameConstant"%>
 <%@ page import="constant.CommonConstant"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
-<bean:size id="beanListSize" name="shiftMstMntForm" property="shiftMstMntBeanList"/>
+<bean:size id="beanListSize" name="shiftMstMntForm"
+	property="shiftMstMntBeanList" />
 <html>
-  <head>
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin_test/pages/js/message.js" charset="utf-8"></script>
-    <script type="text/javascript" language="Javascript1.1">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+<script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+<script type="text/javascript" src="/kikin_test/pages/js/message.js"
+	charset="utf-8"></script>
+<script type="text/javascript" language="Javascript1.1">
     
     /**
      * チェックボックスがチェックされたら true、されていなければ false
@@ -60,7 +63,7 @@
     function shiftMstMntUpdate() {
 
         // 一覧のサイズ
-        var listSize = <%= beanListSize %>;
+        var listSize = <%=beanListSize%>;
         
       	//開始時間空白エラーメッセージ　追加：村瀬
     	var startTimeNullErrMsg = '';    	
@@ -166,124 +169,113 @@
     
     </script>
 
-    <title>シフトマスタメンテナンス画面</title>
+<title>シフトマスタメンテナンス画面</title>
 
-    <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
- 
+<link href="/kikin_test/pages/css/common.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body>
 
-    <div id="wrapper">
-      <div id="header">
-        <table>
-          <tr>
-            <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/shiftMstMntBack.do')" />
-            </td>
-            <td id="headCenter">
-              シフトマスタメンテナンス
-            </td>
-            <td id="headRight">
-               <!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 --> 
-				<input value="ログアウト" type="button" class="smlButton" onclick="doSubmit('/kikin_test/logout.do')" />
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div id="gymBody">
-       <div class="mugi10.jpg">
-        <html:form action="/shiftMstMntUpdate">
-          <div style="width: 600px; margin-left:300px;">
-            <table class="tblHeader" border="1" cellpadding="0" cellspacing="0">
-              <tr>
-                <td width="120px" align="center">
-                  シフト名
-                </td>
-                <td width="70px" align="center">
-                  シンボル
-                </td>
-                <td width="230px" align="center">
-                  時間
-                </td>
-                <td width="100px" align="center">
-                  休憩
-                </td>
-                <td width="70px" align="center">
-                  削除
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div style="overflow: auto; height: 80%; width: 600px; margin-left:300px;">
-            <table class="tblBody" border="1" cellpadding="0" cellspacing="0">
-              <logic:iterate indexId="idx" id="shiftMstMntBeanList" name="shiftMstMntForm"  property="shiftMstMntBeanList">
-              <bean:define id="shiftId" name= "shiftMstMntBeanList" property="shiftId" type="java.lang.String"/>
-                <tr>
-                  <td width="120px"  align="center">
-                    <html:text property="shiftName" name="shiftMstMntBeanList" size="10" maxlength="10" indexed="true"/>
-                    <html:hidden property="shiftId" name="shiftMstMntBeanList" indexed="true"/>
-                  </td>
-                  <td width="70px"  align="center">
-                    <html:text property="symbol" name="shiftMstMntBeanList"  size="2" maxlength="2" indexed="true"/>
-                  </td>
-                  <td width="230px"  align="center">
-                    <table width="100%" >
-                      <tr>
-                        <td align="center">
-                          <html:text property="startTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                        </td>
-                        <td align="center">
-                            &#xFF5E;
-                        </td>
-                        <td align="center">
-                          <html:text property="endTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                  <td width="100px"  align="center">
-                    <html:text property="breakTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                  </td>
+	<div class="newyork">
+		<div id="wrapper">
+			<div id="header">
+				<table>
+					<tr>
+						<td id="headLeft"><input value="戻る" type="button"
+							class="smlButton"
+							onclick="doSubmit('/kikin_test/shiftMstMntBack.do')" /></td>
+						<td id="headCenter">シフトマスタメンテナンス</td>
+						<td id="headRight">
+							<!-- 修正＆追加 有吉　htmlタグをコメントアウトinputタグ記載に修正 --> <input value="ログアウト"
+							type="button" class="smlButton"
+							onclick="doSubmit('/kikin_test/logout.do')" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="gymBody">
+				<div class="mugi10.jpg">
+					<html:form action="/shiftMstMntUpdate">
+						<div style="width: 600px; margin-left: 300px;">
+							<table class="tblHeader" border="1" cellpadding="0"
+								cellspacing="0">
+								<tr>
+									<td width="120px" align="center">シフト名</td>
+									<td width="70px" align="center">シンボル</td>
+									<td width="230px" align="center">時間</td>
+									<td width="100px" align="center">休憩</td>
+									<td width="70px" align="center">削除</td>
+								</tr>
+							</table>
+						</div>
+						<div
+							style="overflow: auto; height: 80%; width: 600px; margin-left: 300px;">
+							<table class="tblBody" border="1" cellpadding="0" cellspacing="0">
+								<logic:iterate indexId="idx" id="shiftMstMntBeanList"
+									name="shiftMstMntForm" property="shiftMstMntBeanList">
+									<bean:define id="shiftId" name="shiftMstMntBeanList"
+										property="shiftId" type="java.lang.String" />
+									<tr>
+										<td width="120px" align="center"><html:text
+												property="shiftName" name="shiftMstMntBeanList" size="10"
+												maxlength="10" indexed="true" /> <html:hidden
+												property="shiftId" name="shiftMstMntBeanList" indexed="true" />
+										</td>
+										<td width="70px" align="center"><html:text
+												property="symbol" name="shiftMstMntBeanList" size="2"
+												maxlength="2" indexed="true" /></td>
+										<td width="230px" align="center">
+											<table width="100%">
+												<tr>
+													<td align="center"><html:text property="startTime"
+															name="shiftMstMntBeanList" size="5" maxlength="5"
+															indexed="true" /></td>
+													<td align="center">&#xFF5E;</td>
+													<td align="center"><html:text property="endTime"
+															name="shiftMstMntBeanList" size="5" maxlength="5"
+															indexed="true" /></td>
+												</tr>
+											</table>
+										</td>
+										<td width="100px" align="center"><html:text
+												property="breakTime" name="shiftMstMntBeanList" size="5"
+												maxlength="5" indexed="true" /></td>
 
-                  <td width="70px"  align="center">
-                    <html:checkbox property="deleteShiftId" name="shiftMstMntBeanList"  value="<%= shiftId %>"  onchange='<%="checkDeleteFlg(" + idx + ")" %>'></html:checkbox>
-                    <html:hidden property="deleteFlg" name="shiftMstMntBeanList" value="false" indexed="true"/>
-                  </td>
-                </tr>
-              </logic:iterate>
-            </table>
-          </div>
-        </html:form>
-        	</div>
-      </div>
-      <div id="footer">
-        <table>
-          <tr>
-            <td id="footLeft">
-              　
-            </td>
-            <td id="footCenter">
-              　
-            </td>
-            <td id="footRight">
-            <!--登録ボタンで画面遷移するよう修正　西 -->
-           	<!--<html:form action="/shiftMstMntRegistInit">
+										<td width="70px" align="center"><html:checkbox
+												property="deleteShiftId" name="shiftMstMntBeanList"
+												value="<%=shiftId%>"
+												onchange='<%="checkDeleteFlg(" + idx + ")"%>'></html:checkbox>
+											<html:hidden property="deleteFlg" name="shiftMstMntBeanList"
+												value="false" indexed="true" /></td>
+									</tr>
+								</logic:iterate>
+							</table>
+						</div>
+					</html:form>
+				</div>
+			</div>
+			<div id="footer">
+				<table>
+					<tr>
+						<td id="footLeft"></td>
+						<td id="footCenter"></td>
+						<td id="footRight">
+							<!--登録ボタンで画面遷移するよう修正　西 --> <!--<html:form action="/shiftMstMntRegistInit">
             	<input type="submit" value="新規登録" class="smlButton"  />
-           	</html:form>  -->
-              <!-- <input value="新規登録" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />-->
-              
-              <!--登録ボタンで画面遷移するようinputタグでの記述に修正　西 -->
-              <input value="新規登録" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/shiftMstMntRegistInit.do')" />
-            </td>
-            <td>
-              <input value="更新" type="button" class="smlButton"  onclick="shiftMstMntUpdate()" />
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    
+           	</html:form>  --> <!-- <input value="新規登録" type="button" class="smlButton"  onclick="shiftMstMntRegistInit()" />-->
+
+							<!--登録ボタンで画面遷移するようinputタグでの記述に修正　西 --> <input value="新規登録"
+							type="button" class="smlButton"
+							onclick="doSubmit('/kikin_test/shiftMstMntRegistInit.do')" />
+						</td>
+						<td><input value="更新" type="button" class="smlButton"
+							onclick="shiftMstMntUpdate()" /></td>
+					</tr>
+				</table>
+			</div>
+		</div>
 
 
-  </body>
+	</div>
+</body>
 </html>
