@@ -18,6 +18,8 @@ String check = (String)session.getAttribute("miss");
 <!-- 文字化け解消 message.jsを呼び出している箇所にcharset="utf-8を追加 -->
 <script type="text/javascript" src="/kikin_test/pages/js/message.js"
 	charset="utf-8"></script>
+
+
 <script type="text/javascript" language="Javascript1.1">
 
 	// ID・パスワードが違う場合エラーメッセージを表示
@@ -55,8 +57,12 @@ String check = (String)session.getAttribute("miss");
 							value="" />
 						<br />
 						<br />
-						<html:submit property="submit" value="ログイン" />
-						<html:reset value="リセット" />
+						<div class="smlButton">
+						<html:submit property="submit"  value="ログイン" style="width: 100px; height: 30px;background-color:#F2A93A ; background: rgba(198,225,228,0.1); border-radius: 100px; border:0;"/>
+						</div>
+						<div class="smlButton">
+						<html:reset property="submit" value="リセット" style="width: 100px; height: 30px;background-color:#F2A93A ; background: rgba(198,225,228,0.1); border-radius: 100px; border:0;"/>
+						</div>
 					</html:form>
 				</div>
 			</div>
