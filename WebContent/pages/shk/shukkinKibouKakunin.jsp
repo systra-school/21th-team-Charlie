@@ -102,7 +102,7 @@
 								<td width="150px" valign="top">
 									<table border="1" cellpadding="0" cellspacing="0">
 										<tr class="tblHeader">
-											<td width="150px" align="center">&nbsp;</td>
+											<td width="150px" align="center" height="18px"></td>
 										</tr>
 										<tr class="tblHeader">
 											<td width="150px" align="center">ŽÐˆõ–¼</td>
