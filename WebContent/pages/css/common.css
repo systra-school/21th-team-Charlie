@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Josefin+Sans:ital,wght@1,600&family=Kosugi+Maru&family=Prata&display=swap');
 /*
 * body定義
 */
@@ -7,6 +8,9 @@
 	   background-size:1500px;
        background-repeat:no-repeat;
 }*/
+body {
+	font-family: 'Kosugi Maru', sans-serif;
+}
 errorbody {
     background-color: red;
 }
@@ -69,7 +73,9 @@ errorbody {
 	  	 background-size:25%;
 }
 
-
+.zone {
+	margin: 15px;
+}
 
 
 
@@ -97,10 +103,11 @@ errorbody {
 }
 #headCenter {
     font-size: 24px;
-    color: #FFFF00;
+    color: #FFFFFF;
     width:800px;
     text-align:center;
 	text-indent: 120px;
+	font-family: 'Kosugi Maru', sans-serif;
 }
 #headRight {
     width:200px;

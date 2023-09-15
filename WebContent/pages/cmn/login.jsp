@@ -46,7 +46,7 @@ String check = (String)session.getAttribute("miss");
 
 			<div id="gymBody">
 				<div align="center">
-					<div>ID・パスワードを入力してください。</div>
+					<div class="zone">ID・パスワードを入力してください。</div>
 					<html:form action="/login"
 						onsubmit="return validateLoginForm(this)">
 						<html:text property="shainId" size="16" value="" />
