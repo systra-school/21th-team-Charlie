@@ -160,7 +160,7 @@
 										style="overflow-x: auto; overflow-y: auto; width: 985px; text-align: center;">
 										<table class="tblHeader" border="1" cellpadding="0"
 											cellspacing="0">
-											<tr height="<%=heightSize%>px">
+											<tr height="26px">
 												<td width="40px" align="center">1</td>
 												<td width="40px" align="center">2</td>
 												<td width="40px" align="center">3</td>
