@@ -18,12 +18,14 @@
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
 
     <title>メニュー画面</title>
+
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
   <div class="mugi5">
     <div id="wrapper">
-      <div id="header">
+      <div id="header" align="center">
+      
         <table>
           <tr>
             <td id="headLeft">
@@ -33,13 +35,13 @@
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="kengenId"
                          value="<%=CommonConstant.Kengen.KANRISYA.getId() %>">
-                　　メニュー(管理者)
+                メニュー(管理者)　　　　　　　
             </logic:equal>
 
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="kengenId"
                          value="<%=CommonConstant.Kengen.IPPAN.getId() %>">
-                メニュー(一般)
+                メニュー(一般)　　　　　　　
             </logic:equal>
             </td>
             <td id="headRight">
@@ -51,9 +53,11 @@
             </td>
           </tr>
         </table>
+        
       </div>
       
-      <div id="gymBody">
+      <div id="gymBody" align="center">
+   
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="kengenId"
                      value="<%=CommonConstant.Kengen.KANRISYA.getId() %>">
@@ -144,6 +148,7 @@
             </td>
           </tr>
         </table>
+      </div>
       </div>
     </div>
     </div>

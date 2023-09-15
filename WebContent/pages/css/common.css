@@ -196,8 +196,16 @@ errorbody {
 .smlButton {
     width: 100px;
     height: 30px;
-    background-color:rgb(192, 192, 192) ;
-   	border-color: white black black white;
+    background-color:#F2A93A ;
+    background: rgba(198,225,228,0.6);
+    border-radius: 100px;
+    border:0;
+}
+
+.smlButton:hover{
+    color: #000; /* 文字色を白にする */
+    background-color: #c9c9c9; /* 背景色をグレー（#c9c9c9）にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/    
 }
 
 /*
@@ -206,9 +214,18 @@ errorbody {
 .bigButton {
     width: 200px;
     height: 50px;
-    background-color:rgb(192, 192, 192) ;
-   border-color: white black black white;
+    background-color:#F2A93A ;
+    background: rgba(198,225,228,0.6);
+     border-radius: 100px;
+     border:0;
 }
+
+.bigButton:hover{
+    color: #000; /* 文字色を白にする */
+    background-color: #c9c9c9; /* 背景色をグレー（#c9c9c9）にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/    
+}
+
 /*
 * ボタンサイズロング
 *仕様を追記　西
@@ -216,8 +233,17 @@ errorbody {
 .lngButton {
     width: 200px;
     height: 30px;
-    background-color:rgb(192, 192, 192) ;
-   	border-color: white black black white;
+   	/*border-color: white black black white; */
+   	background: rgba(198,225,228,0.7);
+   border-radius: 100px;
+   border:0;
+}
+
+
+.lngButton:hover{
+    color: #000; /* 文字色を白にする */
+    background-color: #c9c9c9; /* 背景色をグレー（#c9c9c9）にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/    
 }
 
 
@@ -227,13 +253,43 @@ errorbody {
 .backBtn {
     top: 5px;
     left: 10px;
+   border:0;
+   background: rgba(198,225,228,0.7);
+   border-radius: 100px;
+   border:0;
 }
+
+.backBtn:hover{
+    color: #000; /* 文字色を白にする */
+    background-color: #c9c9c9; /* 背景色をグレー（#c9c9c9）にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/    
+}
+
+/*
+* ログアウトボタンのスタイル
+*/
+.logoutbutton {
+    top: 5px;
+    left: 30px;
+   border:0;
+   background: rgba(198,225,228,0.7);
+   border-radius: 100px;
+   border:0;
+}
+
+.logoutbutton:hover{
+    color: #000; /* 文字色を白にする */
+    background-color: #c9c9c9; /* 背景色をグレー（#c9c9c9）にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/    
+}
+
+
 
 /*
 * テーブルヘッダーのスタイル
 */
 .tblHeader {
-    background-color: #98FB98;
+    background-color:#FF8856;
     font-weight: bold;
 }
 
@@ -241,7 +297,7 @@ errorbody {
 * テーブルボディのスタイル
 */
 .tblBody {
-    background-color: #E0FFFF;
+    background-color: #eae8e1;
 }
 /*
 * 文字色 黒
