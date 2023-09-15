@@ -87,7 +87,7 @@
 		type="text/css" />
 	</head>
 <body>
-	<div class="newyork">
+	 <div class="newyork"> 
 		<div id="wrapper">
 			<div id="header">
 				<table>
@@ -404,6 +404,6 @@
 				</table>
 			</div>
 		</div>
-	</div>
+	 </div> 
 </body>
 </html>

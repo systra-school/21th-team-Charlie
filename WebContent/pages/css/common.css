@@ -10,6 +10,7 @@
 }*/
 body {
 	font-family: 'Kosugi Maru', sans-serif;
+	overflow-x: hidden;
 }
 errorbody {
     background-color: red;
@@ -27,7 +28,6 @@ errorbody {
     	background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
     	background-attachment: fixed; /* スクロールに追従しないように固定 */	
 }
-
 
 .picture{
 
@@ -85,7 +85,7 @@ errorbody {
 #header,#gymBody,#footer {
     width: 100%;
     margin: 0px;
-    padding: 5px;
+    padding: 15px;
 /*     background-color: #66CCFF; */
 }
 
